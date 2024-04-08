@@ -1,0 +1,16 @@
+[package]
+name = "example-component-wasm"
+version = "0.0.0"
+authors = ["The Wasmtime Project Developers"]
+edition = "2021"
+publish = false
+
+[dependencies]
+lv03 = "0.1.1"
+wit-bindgen = "0.23.0"
+
+
+[lib]
+path = "guest.rs"
+name = "guest"
+crate-type = ["cdylib"]
